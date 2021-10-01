@@ -42,6 +42,10 @@ const tabsAppender = (selector) => {
     })
     .catch(err => console.error(err))
     // .finally(() => console.log('check check'))
+    .finally(
+      // () =>
+      // console.log('test test'
+    )
 }
 
 export { Tabs, tabsAppender }

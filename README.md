@@ -60,7 +60,27 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is the DOM?
+
+    The DOM (document object model) is a model of the structure of a webpage, with a tree data structure, built by the browser based on the HTML page provided. It is important to note that the DOM is not in fact the same as the index.html. Elements can be added to the DOM, but this does not also add them to the HTML document. Because it is in a tree structure, we can traverse the elements in the object using parent-child relations, accessing whatever element we wish.
+
+    The DOM is accessible as the global js object `document` with a vast number of object methods built in. Using these methods enables a developer to, among other things, manipulate what is seen by a user in the browser dynamically as the user interacts with the page (by adding elements, changing styling, etc.).
+
 2. What is an event?
+
+    An event is simply an instance of a user interacting with a webpage, which is tracked by the browser. There are many different events that the browser tracks, but some commonly used examples include `click`, `scroll`, `load`, and many more. 
+
 3. What is an event listener?
+
+    An event listener is an object method that you can call in order to execute specified code whenever a certain `event` goes off. These events are presumably going off all the time in the browser (clicking, scrolling), but without event listeners the browser doesn't know what to do when they go off. 
+
+    A basic example of a use case would be adding an event listener to a hamburger menu icon. It could listen for the icon being clicked, and when it is, it displays the hidden menu.
+
 4. Why would we convert a NodeList into an Array?
+
+    Because a NodeList is not an array, we do not have full access to array methods. In order to call an advanced array method (other than `.forEach`, which does work on a NodeList) like `.map`, we have to first convert the NodeList into an array. We can achieve this by passing our NodeList into an `Array.from()`.
+
 5. What is a component?
+
+   A component is a combination of different parts (HTML, CSS, and/or JS) that all come together for reuse in a website. In this sprint, we mainly focused on building components in Javascript that built out HTML elements structured as desired, added styling as appropriate with CSS, and in some cases called an api to dynamically populate the content of what the component was producing. 
+
+   A component helps keep code DRY, preventing the need to hard code many times what can be produced as many times as necessary with a function. A simple use case for this is a blog homepage that has preview cards for the most recent posts on the site. Instead of having to hard code each of these elements (whose structures are identical and differences are only in content), we can use a component to do it for us.

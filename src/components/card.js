@@ -68,6 +68,10 @@ const cardAppender = (selector) => {
       res.data.articles.node.forEach(obj => append.appendChild(Card(obj)));
     })
     .catch(err => console.error(err))
+    .finally(
+      // () =>
+      // console.log('check check')
+    )
 }
     
 
