@@ -42,7 +42,8 @@ const Card = (article) => {
   image.src = article.authorPhoto;
   authorSpan.textContent = `By ${article.authorName}`
 
-  console.log(cardDiv)
+  cardDiv.addEventListener('click', () => console.log(article.headline))
+  // console.log(cardDiv)
   return cardDiv
 }
 
